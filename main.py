@@ -18,3 +18,10 @@ b1 = numpy.sum([(Matrix[i][0] - ArMeanX) * (Matrix[i][1] - ArMeanY) for i in ran
 b0 = ArMeanY - b1 * ArMeanX
 
 print('y(x) =', b1, 'x +', b0)
+
+sepow2 = numpy.sum([pow(Matrix[i][1] - (b1 * Matrix[i][0] + b0), 2) for i in range(len(Matrix))]) / len(Matrix) - 2
+
+print('se^2 =', sepow2)
+
+
+
